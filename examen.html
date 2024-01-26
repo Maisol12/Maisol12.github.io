@@ -29,17 +29,15 @@
             z-index: 1000;
         }
 
-        /* Estilo general de la Pokédex */
-.pokedex-container {
+        .pokedex-container {
   background-color: red;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 0 20px #000;
-  width: 300px; /* Ajusta según el tamaño deseado */
+  width: 350px; 
   margin: auto;
 }
 
-/* Estilo de la tarjeta de Pokémon */
 .card {
   background-color: #fff;
   border: 2px solid #000;
@@ -62,7 +60,7 @@
   font-size: 1.5em;
   color: #000;
   margin-bottom: 15px;
-  text-transform: capitalize;
+  text-transform: capitalize; 
 }
 
 .card-text {
@@ -72,6 +70,7 @@
   margin-bottom: 10px;
 }
 
+/* Estilo del botón */
 .btn-primary {
   background-color: #ffcb05;
   border: none;
@@ -91,7 +90,6 @@
   transform: translateY(4px);
 }
 
-
 .pokedex-lights {
   display: flex;
   justify-content: space-around;
@@ -105,14 +103,34 @@
   display: inline-block;
 }
 
-.pokedex-button1 {
-  width: 50px;
-  height: 50px;
+.pokedex-buttonA {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: inline-block;
+  align-self: center
 }
 
+.pokedex-buttonB {
+  width: 100px;
+  height: 30px;
+  margin-top: 0;
+  border-radius: 20px; 
+  display: inline-block;
+  background-color: #00FF00; 
+  border: 3px solid #000000; 
+  position: relative;
+  top: 10px;
+  top: 0;
+  margin: 0 5px; 
+}
+
+
 .light-blue {
+  background-color: #2850a6;
+}
+
+.light-blueLight {
   background-color: #a1effd;
 }
 
@@ -126,6 +144,13 @@
 
 .light-green {
   background-color: #77dd77;
+}
+
+.pokedex-buttons-bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; 
+  margin-top: 10px;
 }
     </style>    
 </head>
@@ -157,6 +182,7 @@
                         const card = `
                         <div class="pokedex-container">
             <div class="pokedex-lights">
+                <span class="pokedex-buttonA light-blueLight"></span>
                 <span class="pokedex-button light-red"></span>
                 <span class="pokedex-button light-yellow"></span>
                 <span class="pokedex-button light-green"></span>
@@ -170,7 +196,11 @@
                     <p class="card-text">Altura: ${data.height * 10}cm</p>
                 </div>
             </div>
-            <button id="randomPokemon" class="btn btn-primary">Busca tu pokemon</button>
+            <div class="pokedex-buttons-bottom">
+                <span class="pokedex-buttonA light-blue"></span>
+                <span class="pokedex-buttonB light-green"></span>
+                <span class="pokedex-buttonB light-yellow"></span>
+            </div>
         </div>
                         `;
     
